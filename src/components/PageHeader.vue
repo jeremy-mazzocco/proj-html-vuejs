@@ -8,22 +8,27 @@ export default {
 <template>
     <header>
         <!-- header contact bar -->
-        <div class="container" id="header-contact-bar">
-            <div class="open-hours">
-                Open Hours: Mon-Sat - 9:00-18:00
-            </div>
-            <div class="contact">
-                <span class="phone-number">
-                    +1(305)1234-5678
-                </span>
-                <span class="email">
-                    hello@example.com
-                </span>
-                <span class="socials">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </span>
+        <div class="header-contact-bar">
+            <div class="container">
+                <div class="open-hours">
+                    <i class="fa-solid fa-clock"></i>
+                    Open Hours: Mon-Sat - 9:00-18:00
+                </div>
+                <div class="contact">
+                    <span class="phone-number">
+                        <i class="fa-solid fa-phone"></i>
+                        +1(305)1234-5678
+                    </span>
+                    <span class="email">
+                        <i class="fa-solid fa-envelope"></i>
+                        hello@example.com
+                    </span>
+                    <span class="socials">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </span>
+                </div>
             </div>
         </div>
         <!-- header jumbotron -->
@@ -35,7 +40,7 @@ export default {
                 <div class="list">
                     <ul>
                         <li>home</li>
-                        <li>sevices</li>
+                        <li>services</li>
                         <li>about</li>
                         <li>projects</li>
                         <li>results</li>
@@ -52,7 +57,7 @@ export default {
                 <h1>
                     Team
                 </h1>
-                <div>
+                <div class="text">
                     No matter what the comapany needs we will be ready to assist you in the best possible way.
                 </div>
                 <div>
@@ -66,7 +71,6 @@ export default {
 
 <style lang="scss" scoped>
 @use './styles/partials/mixins.scss' as*;
-@use './styles/general.scss' as*;
 
 .container,
 nav,
@@ -75,36 +79,96 @@ ul,
     @include my-dislay-flex;
 }
 
-#header-contact-bar {
-    height: 30px;
+//  <!-- header contact bar -->
+.header-contact-bar {
+    height: 40px;
+    background-color: #21333E;
+    color: #C0C3D0;
+    font-size: 12px;
+
+    .fa-solid,
+    .fa-brands {
+        padding: 0px 3px;
+    }
+
+    span {
+        padding: 0px 10px;
+    }
+
+    .fa-facebook-f,
+    .fa-twitter,
+    .fa-linkedin-in {
+        margin: 0px 10px;
+    }
 }
 
+// <!-- header jumbotron -->
 section {
     position: relative;
     background-image: url(../assets/images/bg-parallax.png);
-    background-position: center;
-    background-size: 2500px 600px;
+    background-position-y: 50%;
+    background-position-x: center;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 800px;
 
     nav {
-        height: 50px;
+        height: 55px;
+        font-size: 14px;
 
         .logo {
-            width: 140px;
+            width: 100px;
+        }
+
+        li {
+            padding: 0px 10px;
+            margin: 0px 10px;
+            text-transform: uppercase;
+            color: #21333E;
+        }
+
+        button {
+            @include my-button-main-color
         }
     }
 
     .jumbotron-text {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
 
+        h1:first-child {
+            color: #21333E;
+        }
+
         h1 {
             display: inline-block;
-            font-size: 50px;
+            font-size: 55px;
+            font-weight: 800;
+            margin: 5px;
+        }
+
+        h1:nth-child(2) {
+            background-color: #05838316;
+            color: #058283;
+            padding: 0px 10px;
+            border-radius: 3px;
+        }
+
+        .text {
+            padding: 0px 22%;
+            margin: 25px 0px;
+            color: #8f9096;
+        }
+
+        button:first-child {
+            @include my-button-main-color;
+        }
+
+        button {
+            @include my-button-second-color;
+            margin: 10px;
         }
     }
 }
