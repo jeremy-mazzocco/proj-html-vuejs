@@ -8,7 +8,7 @@ export default {
 <template>
     <header>
         <!-- header contact bar -->
-        <div class="container">
+        <div class="container" id="header-contact-bar">
             <div class="open-hours">
                 Open Hours: Mon-Sat - 9:00-18:00
             </div>
@@ -45,7 +45,21 @@ export default {
                     </button>
                 </div>
             </nav>
-
+            <div class="jumbotron-text">
+                <h1>
+                    Ready
+                </h1>
+                <h1>
+                    Team
+                </h1>
+                <div>
+                    No matter what the comapany needs we will be ready to assist you in the best possible way.
+                </div>
+                <div>
+                    <button>get in touch</button>
+                    <button>read more</button>
+                </div>
+            </div>
         </section>
     </header>
 </template>
@@ -61,24 +75,37 @@ ul,
     @include my-dislay-flex;
 }
 
-.container {
+#header-contact-bar {
     height: 30px;
-
-}
-
-nav {
-    height: 50px;
-
-    .logo {
-        width: 140px;
-    }
 }
 
 section {
+    position: relative;
     background-image: url(../assets/images/bg-parallax.png);
     background-position: center;
-    background-size: cover;
+    background-size: 2500px 600px;
     background-repeat: no-repeat;
     height: 500px;
+
+    nav {
+        height: 50px;
+
+        .logo {
+            width: 140px;
+        }
+    }
+
+    .jumbotron-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h1 {
+            display: inline-block;
+            font-size: 50px;
+        }
+    }
 }
 </style>
