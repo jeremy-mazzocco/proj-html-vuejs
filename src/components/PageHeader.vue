@@ -158,8 +158,7 @@ section {
         }
 
         h1:nth-child(2) {
-            background-color: #05838316;
-            color: #058283;
+            @include background-titles;
             padding: 0px 10px;
             border-radius: 3px;
         }

@@ -21,3 +21,9 @@
     border-radius: 3px;
     border: 1px solid #058283;
 }
+
+@mixin background-titles {
+    background-color: #05838316;
+    color: #058283;
+    border-radius: 5px;
+}
