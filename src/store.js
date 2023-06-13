@@ -44,5 +44,27 @@ export const store = reactive({
             title: 'Regulatory Risk',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
         }
+    ],
+    thecompany_cards: [
+        {
+            icon: '../src/assets/svgs/award.svg',
+            title: 'Tradition',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        },
+        {
+            icon: '../src/assets/svgs/lock.svg',
+            title: 'Security',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        },
+        {
+            icon: '../src/assets/svgs/certificate.svg',
+            title: 'Certificate',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        },
+        {
+            icon: '../src/assets/svgs/graduation.svg',
+            title: 'Expertise',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        },
     ]
 })

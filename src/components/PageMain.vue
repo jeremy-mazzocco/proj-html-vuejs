@@ -1,11 +1,13 @@
 <script>
 import { store } from "../store";
 import ServiceCards from "./small_components/ServiceCards.vue";
+import TheCompanyCards from "./small_components/TheCompanyCards.vue"
 
 export default {
     name: "PageMain",
     components: {
         ServiceCards,
+        TheCompanyCards
     },
     data() {
         return {
@@ -69,19 +71,17 @@ export default {
                     servies to select clients.
                 </p>
                 <div class="row">
-                    <div class="card">
-                        <h3>
-                            Tradition
-                        </h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </div>
+                    <TheCompanyCards v-for="(card, idx) in store.thecompany_cards" :key="idx" :detailscard="card" />
                 </div>
+                <button class="fist-button" id="btn-main">
+                    get in touch
+                </button>
+                <button class="second-button" id="btn-second">
+                    read more
+                </button>
             </div>
         </div>
         <div class="right">
-
         </div>
     </section>
 </template>
@@ -157,9 +157,9 @@ export default {
         position: relative;
 
         .text {
-            width: 60%;
+            width: 56%;
             position: absolute;
-            right: 0;
+            right: 3%;
             top: 12%;
             margin-right: 10px;
 
@@ -190,21 +190,26 @@ export default {
             p {
                 @include paragraph-style;
                 color: rgb(218, 218, 218);
-                margin: 10px 0px;
+                margin: 15px 0px;
             }
 
             .row {
                 @include my-dislay-flex;
-                gap: 10px;
+                flex-wrap: wrap;
+                gap: 10px 15px;
+                margin: 55px 0px;
+            }
 
-                .card {
-                    width: calc((100% / 2) - 10px);
+            .fist-button {
+                @include my-button-main-color;
+                margin: 0px 5px;
+            }
 
-                    h3 {
-                        color: white;
-                    }
-                }
-
+            .second-button {
+                @include my-button-second-color;
+                background-color: black;
+                color: white;
+                margin: 0px 5px;
             }
         }
     }
