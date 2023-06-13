@@ -15,7 +15,9 @@ export default {
                 <img :src="detailscard.icon" alt="#">
             </div>
             <div class="fa">
-                <i class="fa-solid fa-arrow-right"></i>
+                <a href="#">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
         </div>
         <h3>{{ detailscard.title }}</h3>
@@ -45,10 +47,20 @@ export default {
         .fa {
             position: absolute;
             right: 0;
+            padding: 4px 5px;
+            border-radius: 50px;
 
             i {
                 color: #90C8C8;
                 font-size: 20px;
+            }
+        }
+
+        .fa:hover {
+            background-color: rgb(129, 217, 217);
+
+            i {
+                color: rgb(18, 138, 139)
             }
         }
     }
