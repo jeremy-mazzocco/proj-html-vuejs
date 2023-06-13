@@ -1,6 +1,17 @@
 <script>
+import { store } from "../store";
+import NavItem from "./NavItem.vue";
+
 export default {
-    name: "PageHeader"
+    name: "PageHeader",
+    components: {
+        NavItem,
+    },
+    data() {
+        return {
+            store,
+        }
+    }
 }
 
 </script>
@@ -12,16 +23,16 @@ export default {
             <div class="container">
                 <div class="open-hours">
                     <i class="fa-solid fa-clock"></i>
-                    Open Hours: Mon-Sat - 9:00-18:00
+                    {{ store.contact.open_hours }}
                 </div>
                 <div class="contact">
                     <span class="phone-number">
                         <i class="fa-solid fa-phone"></i>
-                        +1(305)1234-5678
+                        {{ store.contact.phone_number }}
                     </span>
                     <span class="email">
                         <i class="fa-solid fa-envelope"></i>
-                        hello@example.com
+                        {{ store.contact.email }}
                     </span>
                     <span class="socials">
                         <i class="fa-brands fa-facebook-f"></i>
@@ -38,12 +49,9 @@ export default {
                     <img src="../assets/svgs/svg-7.svg" alt="">
                 </div>
                 <div class="list">
+                    <!-- here the nav  -->
                     <ul>
-                        <li>home</li>
-                        <li>services</li>
-                        <li>about</li>
-                        <li>projects</li>
-                        <li>results</li>
+                        <NavItem v-for="(item, idx) in store.jumbotron_nav" :detailsjumbo="item" :key="idx" />
                     </ul>
                     <button>
                         get in touch
