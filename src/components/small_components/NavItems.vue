@@ -10,6 +10,8 @@ export default {
 </script>
 <template>
     <li>
-        {{ detailsjumbo }}
+        <a href="#">
+            {{ detailsjumbo }}
+        </a>
     </li>
 </template>

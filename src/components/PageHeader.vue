@@ -1,6 +1,6 @@
 <script>
 import { store } from "../store";
-import NavItem from "./NavItem.vue";
+import NavItem from "./small_components/NavItems.vue";
 
 export default {
     name: "PageHeader",
@@ -13,7 +13,6 @@ export default {
         }
     }
 }
-
 </script>
 
 <template>
@@ -32,12 +31,14 @@ export default {
                     </span>
                     <span class="email">
                         <i class="fa-solid fa-envelope"></i>
-                        {{ store.contact.email }}
+                        <a href="#">
+                            {{ store.contact.email }}
+                        </a>
                     </span>
                     <span class="socials">
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-linkedin-in"></i>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                     </span>
                 </div>
             </div>
@@ -46,14 +47,16 @@ export default {
         <section>
             <nav>
                 <div class="logo">
-                    <img src="../assets/svgs/svg-7.svg" alt="">
+                    <a href="#">
+                        <img src="../assets/svgs/svg-7.svg" alt="">
+                    </a>
                 </div>
                 <div class="list">
                     <!-- here the nav  -->
                     <ul>
                         <NavItem v-for="(item, idx) in store.jumbotron_nav" :detailsjumbo="item" :key="idx" />
                     </ul>
-                    <button>
+                    <button id="btn-main">
                         get in touch
                     </button>
                 </div>
@@ -69,8 +72,8 @@ export default {
                     No matter what the comapany needs we will be ready to assist you in the best possible way.
                 </div>
                 <div>
-                    <button>get in touch</button>
-                    <button>read more</button>
+                    <button id="btn-main">get in touch</button>
+                    <button id="btn-second">read more</button>
                 </div>
             </div>
         </section>

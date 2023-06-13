@@ -1,13 +1,24 @@
 <script>
+import { store } from "../store";
+import ServiceCards from "./small_components/ServiceCards.vue";
 
 export default {
-    name: "PageMain"
+    name: "PageMain",
+    components: {
+        ServiceCards,
+    },
+    data() {
+        return {
+            store,
+        }
+    }
 }
 
 </script>
 
 <template>
-    <section>
+    <!-- OUR BUSINESS AREA - 1 -->
+    <section class="bussiness-area">
         <div class="container">
             <h4>
                 our business areas
@@ -26,26 +37,51 @@ export default {
                     expericed ad renowed professionals. These are some options that you can hire.
                 </p>
                 <div class="button">
-                    <button>
+                    <button id="btn-main">
                         see all
                     </button>
                 </div>
             </div>
             <!-- here the Services Cards -->
             <div class="row">
-                <div class="card">
-                    <div class="icons">
-                        <div class="img">
-                            <img src="../assets/svgs/svg-1.svg" alt="#">
-                        </div>
-                        <div class="fa">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
+                <ServiceCards v-for="(card, idx) in store.services_cards" :key="idx" :detailscard="card" />
+            </div>
+        </div>
+    </section>
+
+    <!--    ABOUT THE NETWORK - 2 -->
+    <section class="about-network">
+        <div class="left">
+            <div class="text">
+                <h4>
+                    about the network
+                </h4>
+                <div class="title">
+                    <h2>
+                        The
+                    </h2>
+                    <h2>
+                        Company
+                    </h2>
+                </div>
+                <p>
+                    For 12 yearswe have been providing audit for warranty, financial avice, risk advice, taxes and related
+                    servies to select clients.
+                </p>
+                <div class="row">
+                    <div class="card">
+                        <h3>
+                            Tradition
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
                     </div>
-                    <h3>Audit & Assurance</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
             </div>
+        </div>
+        <div class="right">
+
         </div>
     </section>
 </template>
@@ -53,18 +89,15 @@ export default {
 <style lang="scss" scoped>
 @use './styles/partials/mixins.scss' as*;
 
-section {
+// OUR BUSINESS AREA - 1
+.bussiness-area {
     background-color: #EEF4ED;
-    height: 800px;
 
     .container {
         padding: 110px 0px;
 
         h4 {
-            color: #00A6A6;
-            text-transform: uppercase;
-            font-size: 12px;
-            margin: 10px 0px;
+            @include intro-title;
         }
 
         .title {
@@ -73,7 +106,6 @@ section {
                 font-size: 40px;
                 margin: 10px 0px;
                 color: #21333E;
-
             }
 
             h2:nth-child(2) {
@@ -88,11 +120,9 @@ section {
             margin: 10px 0px;
 
             p {
-                color: #606D75;
+                @include paragraph-style;
                 display: inline-block;
                 width: 80%;
-                font-size: 14px;
-                font-weight: 300;
             }
 
             .button {
@@ -108,50 +138,85 @@ section {
 
         .row {
             @include my-dislay-flex;
+            flex-wrap: wrap;
             gap: 10px;
             margin: 40px 0px;
+        }
+    }
+}
 
-            .card {
-                width: calc((100% / 3) - 10px);
-                background-color: white;
-                height: 240px;
-                border-radius: 10px;
-                padding: 40px;
+// ABOUT THE NETWORK - 2 
+.about-network {
+    height: 700px;
+    display: flex;
 
-                .icons {
-                    position: relative;
+    .left {
+        background-color: #111117;
+        width: calc(100% / 2);
+        height: 100%;
+        position: relative;
 
-                    .img {
-                        display: inline-block;
-                        width: 40px;
-                        filter: invert(19%) sepia(25%) saturate(643%) hue-rotate(158deg) brightness(89%) contrast(96%);
-                    }
+        .text {
+            width: 60%;
+            position: absolute;
+            right: 0;
+            top: 12%;
+            margin-right: 10px;
 
-                    .fa {
-                        position: absolute;
-                        right: 0;
+            h4 {
+                @include intro-title;
+            }
 
-                        i {
-                            color: #90C8C8;
-                            font-size: 20px;
-                        }
-                    }
-                }
-
-                h3 {
-                    color: #21333E;
-                    margin: 10px 0px;
-                }
-
-                p {
-                    color: #3f464b;
+            .title {
+                h2 {
                     display: inline-block;
-                    font-size: 13px;
-                    font-weight: 300;
-                    margin: 10px 0px;
+                    font-size: 40px;
+                    color: white;
+                }
+
+                h2:first-child {
+                    background-color: rgba(27, 142, 142, 0.14);
+                    border-radius: 5px;
+                    margin: 10px 3px;
+                    padding: 0px 10px;
+                    color: white;
+                }
+
+                h2:nth-child(2) {
+                    margin-left: 4px;
                 }
             }
+
+            p {
+                @include paragraph-style;
+                color: rgb(218, 218, 218);
+                margin: 10px 0px;
+            }
+
+            .row {
+                @include my-dislay-flex;
+                gap: 10px;
+
+                .card {
+                    width: calc((100% / 2) - 10px);
+
+                    h3 {
+                        color: white;
+                    }
+                }
+
+            }
         }
+    }
+
+    // ABOUT THE NETWOR - 2
+    .right {
+        background-image: url(../assets/images/about-4.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: calc(100% / 2);
+        height: 100%;
     }
 }
 </style>
