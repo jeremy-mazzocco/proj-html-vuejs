@@ -3,33 +3,40 @@
 export default {
     name: "ActionProjectsCards",
     props: {
-        detailscard: Object,
+        detailscardproject: Object,
     }
 }
 
 </script>
+
 <template>
     <div class="card">
-
-        <div class="img">
-            <img :src="detailscard.icon" alt="#">
+        <div class="transparent">
+            <div class="description">{{ detailscardproject.description }}</div>
         </div>
-
-        <p>{{ detailscard.description }}</p>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .card {
     width: calc((100% / 3) - 10px);
-    height: 400px;
+    height: 298px;
     border-radius: 10px;
-    padding: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
 
-    .img {
+    .transparent {
+        background-color: rgba(31, 31, 31, 0.5);
+        height: 100%;
+        border-radius: 10px;
 
-        width: 40px;
-        filter: invert(17%) sepia(17%) saturate(2227%) hue-rotate(132deg) brightness(101%) contrast(94%);
+        .description {
+            padding-top: 220px;
+            color: white;
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
     }
 }
 </style>

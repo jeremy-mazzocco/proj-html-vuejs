@@ -75,5 +75,31 @@ export const store = reactive({
         innovation: 'innovation',
         enviroment: 'enviroment',
         technology: 'technology'
-    }
+    },
+    action_and_projects_cards: [
+        {
+            img: './src/assets/images/project-1.jpg',
+            description: 'Academic professional program in social media'
+        },
+        {
+            img: './src/assets/images/project-2.jpg',
+            description: 'President"s speech at the annual meeting'
+        },
+        {
+            img: './src/assets/images/project-3.jpg',
+            description: 'International business trip in Shanghai'
+        },
+        {
+            img: './src/assets/images/project-4.jpg',
+            description: 'Technology workshop with education theme'
+        },
+        {
+            img: './src/assets/images/project-5.jpg',
+            description: 'Donation of clothes and food to the partner NGO'
+        },
+        {
+            img: './src/assets/images/project-6.jpg',
+            description: 'Cofraternisation of the procurement team'
+        }
+    ]
 })

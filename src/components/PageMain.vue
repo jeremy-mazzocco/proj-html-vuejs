@@ -3,13 +3,17 @@ import { store } from "../store";
 import ServiceCards from "./small_components/ServiceCards.vue";
 import TheCompanyCards from "./small_components/TheCompanyCards.vue";
 import ActionProjectsItems from "./small_components/ActionProjectsItems.vue";
+import ActionProjectsCards from "./small_components/ActionProjectsCards.vue";
+
 
 export default {
     name: "PageMain",
     components: {
         ServiceCards,
         TheCompanyCards,
-        ActionProjectsItems
+        ActionProjectsItems,
+        ActionProjectsCards,
+
     },
     data() {
         return {
@@ -114,7 +118,8 @@ export default {
                 </ul>
             </div>
             <div class="row">
-
+                <ActionProjectsCards v-for="(card, idx) in store.action_and_projects_cards" :key="idx"
+                    :detailscardproject="card" :style='{ backgroundImage: "url(" + card.img + ")", }' />
             </div>
         </div>
     </section>
@@ -250,21 +255,22 @@ export default {
             }
         }
     }
-
-    // ABOUT THE NETWOR - 2
-    .right {
-        background-image: url(../assets/images/about-4.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: calc(100% / 2);
-        height: 100%;
-    }
 }
+
+// ABOUT THE NETWORK - 2
+.right {
+    background-image: url(../assets/images/about-4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: calc(100% / 2);
+    height: 100%;
+}
+
 
 // ACTION & PROJECTS - 3 
 .actions-projects {
-    height: 900px;
+    height: 1050px;
     padding: 90px 0px;
     text-align: center;
 
@@ -301,6 +307,8 @@ export default {
 
         .row {
             @include my-dislay-flex;
+            flex-wrap: wrap;
+            gap: 20px 10px;
         }
     }
 }
