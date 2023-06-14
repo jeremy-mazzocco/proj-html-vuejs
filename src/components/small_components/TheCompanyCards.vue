@@ -13,9 +13,9 @@ export default {
         <div class="img">
             <img :src="detailscard.icon" alt="#">
         </div>
-        <h3>
+        <h4>
             {{ detailscard.title }}
-        </h3>
+        </h4>
         <p>
             {{ detailscard.description }}
         </p>
@@ -39,7 +39,7 @@ export default {
         }
     }
 
-    h3 {
+    h4 {
         color: rgb(255, 255, 255);
         display: inline-block;
     }

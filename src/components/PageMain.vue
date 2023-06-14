@@ -143,7 +143,7 @@ export default {
             </div>
         </div>
     </section>
-    <!-- LOGOS -->
+    <!-- LOGOS - 5 -->
     <section class="logos">
         <div class="container">
             <div class="img">
@@ -166,7 +166,7 @@ export default {
             </div>
         </div>
     </section>
-    <!-- GET IN TOUCH -->
+    <!-- GET IN TOUCH - 6 -->
     <section class="get-in-touch">
 
     </section>
@@ -400,7 +400,7 @@ export default {
     }
 }
 
-// LOGOS
+// LOGOS - 5
 .logos {
     height: 220px;
     background-color: #111117;
@@ -427,7 +427,7 @@ export default {
     }
 }
 
-// GET IN TOUCH
+// GET IN TOUCH - 6
 .get-in-touch {
     height: 700px;
 }

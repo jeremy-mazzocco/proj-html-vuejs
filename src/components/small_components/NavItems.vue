@@ -15,3 +15,5 @@ export default {
         </a>
     </li>
 </template>
+
+<style lang="scss" scoped></style>

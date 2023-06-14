@@ -134,10 +134,15 @@ section {
         }
 
         li {
-            padding: 0px 10px;
+            padding: 5px 10px;
             margin: 0px 10px;
             text-transform: uppercase;
             color: $second-color;
+        }
+
+        li:hover {
+            background-color: #05838316;
+            border-radius: 5px;
         }
 
         button {
