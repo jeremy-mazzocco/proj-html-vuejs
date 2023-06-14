@@ -117,7 +117,7 @@ export const store = reactive({
         },
         {
             number: '94',
-            text: 'Countries Seerved'
+            text: 'Countries Served'
         }
     ]
 })

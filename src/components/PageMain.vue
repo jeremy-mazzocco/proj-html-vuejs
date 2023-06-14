@@ -143,6 +143,33 @@ export default {
             </div>
         </div>
     </section>
+    <!-- LOGOS -->
+    <section class="logos">
+        <div class="container">
+            <div class="img">
+                <img src="../assets/images/logo-4.png" alt="#">
+            </div>
+            <div class="img-5">
+                <img src="../assets/images/logo-5.png" alt="#">
+            </div>
+            <div class="img-1">
+                <img src="../assets/images/logo-1.png" alt="#">
+            </div>
+            <div class="img-2">
+                <img src="../assets/images/logo-2.png" alt="#">
+            </div>
+            <div class="img">
+                <img src="../assets/images/logo-3.png" alt="#">
+            </div>
+            <div class="img">
+                <img src="../assets/images/logo-4.png" alt="#">
+            </div>
+        </div>
+    </section>
+    <!-- GET IN TOUCH -->
+    <section class="get-in-touch">
+
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -339,7 +366,7 @@ export default {
 
 // WHAT WE ARE DOING - 4
 .what-we-are-doing {
-    height: 450px;
+    height: 480px;
     padding: 90px 0px;
     text-align: center;
     background-image: url(../assets/images/bg-7.jpg);
@@ -371,5 +398,39 @@ export default {
             padding: 30px 45px;
         }
     }
+}
+
+// LOGOS
+.logos {
+    height: 220px;
+    background-color: #111117;
+
+    .container {
+        @include my-dislay-flex;
+        padding: 0px 15px;
+
+        .img {
+            width: 75px;
+            filter: invert(85%) sepia(7%) saturate(3%) hue-rotate(235deg) brightness(84%) contrast(82%);
+        }
+
+        .img-5 {
+            width: 50px;
+            filter: invert(85%) sepia(7%) saturate(3%) hue-rotate(235deg) brightness(84%) contrast(82%);
+
+        }
+
+        .img-1,
+        .img-2 {
+            width: 100px;
+            filter: invert(85%) sepia(7%) saturate(3%) hue-rotate(235deg) brightness(84%) contrast(82%);
+
+        }
+    }
+}
+
+// GET IN TOUCH
+.get-in-touch {
+    height: 700px;
 }
 </style>
