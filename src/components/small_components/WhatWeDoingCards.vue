@@ -17,8 +17,10 @@ export default {
     </div>
 </template>
 <style lang="scss">
+@use '../styles/partials/colors.scss' as*;
+
 .number {
-    color: #00A6A6;
+    color: $main-color;
     font-weight: 600;
     font-size: 32px;
 }

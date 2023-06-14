@@ -1,3 +1,5 @@
+@use '../partials/colors.scss' as *;
+
 @mixin my-dislay-flex {
     display: flex;
     justify-content: space-between;
@@ -5,7 +7,7 @@
 }
 
 @mixin my-button-main-color {
-    background-color: #058283;
+    background-color: $main-color;
     text-transform: uppercase;
     color: white;
     padding: 9px 23px;
@@ -16,14 +18,14 @@
 @mixin my-button-second-color {
     background-color: #ffffff;
     text-transform: uppercase;
-    color: #058283;
+    color: $main-color;
     padding: 8px 22px;
     border-radius: 4px;
-    border: 1px solid #058283;
+    border: 1px solid $main-color;
 }
 
 @mixin intro-title {
-    color: #00A6A6;
+    color: $main-color;
     text-transform: uppercase;
     font-size: 12px;
     margin: 10px 0px;
@@ -33,13 +35,13 @@
     display: inline-block;
     font-size: 40px;
     margin: 10px 0px;
-    color: #21333E;
+    color: $second-color;
     font-weight: 800;
 }
 
 @mixin titles-1-background {
     background-color: #05838316;
-    color: #058283;
+    color: $main-color;
     border-radius: 5px;
     margin-left: 4px;
     padding: 0px 4px;

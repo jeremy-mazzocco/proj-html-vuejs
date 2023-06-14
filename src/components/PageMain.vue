@@ -371,7 +371,7 @@ export default {
     text-align: center;
     background-image: url(../assets/images/bg-7.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
 
     .container {
 
@@ -411,20 +411,18 @@ export default {
 
         .img {
             width: 75px;
-            filter: invert(85%) sepia(7%) saturate(3%) hue-rotate(235deg) brightness(84%) contrast(82%);
+            filter: invert(82%) sepia(3%) saturate(35%) hue-rotate(314deg) brightness(82%) contrast(84%);
         }
 
         .img-5 {
             width: 50px;
-            filter: invert(85%) sepia(7%) saturate(3%) hue-rotate(235deg) brightness(84%) contrast(82%);
-
+            filter: invert(82%) sepia(3%) saturate(35%) hue-rotate(314deg) brightness(82%) contrast(84%);
         }
 
         .img-1,
         .img-2 {
             width: 100px;
-            filter: invert(85%) sepia(7%) saturate(3%) hue-rotate(235deg) brightness(84%) contrast(82%);
-
+            filter: invert(82%) sepia(3%) saturate(35%) hue-rotate(314deg) brightness(82%) contrast(84%);
         }
     }
 }

@@ -82,6 +82,7 @@ export default {
 
 <style lang="scss" scoped>
 @use './styles/partials/mixins.scss' as*;
+@use './styles/partials/colors.scss' as*;
 
 .container,
 nav,
@@ -93,7 +94,7 @@ ul,
 //  <!-- header contact bar -->
 .header-contact-bar {
     height: 40px;
-    background-color: #21333E;
+    background-color: $second-color;
     color: #C0C3D0;
     font-size: 12px;
 
@@ -136,7 +137,7 @@ section {
             padding: 0px 10px;
             margin: 0px 10px;
             text-transform: uppercase;
-            color: #21333E;
+            color: $second-color;
         }
 
         button {

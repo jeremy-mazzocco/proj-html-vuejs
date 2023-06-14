@@ -8,6 +8,8 @@ export default {
 }
 
 </script>
+
+
 <template>
     <div class="card">
         <div class="icons">
@@ -25,8 +27,10 @@ export default {
     </div>
 </template>
 
+
 <style lang="scss" scoped>
 @use '../styles/partials/mixins.scss' as*;
+@use '../styles/partials/colors.scss' as *;
 
 .card {
     width: calc((100% / 3) - 10px);
@@ -66,7 +70,7 @@ export default {
     }
 
     h3 {
-        color: #21333E;
+        color: $second-color;
         margin: 10px 0px;
     }
 
