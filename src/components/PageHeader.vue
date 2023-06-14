@@ -116,15 +116,17 @@ ul,
 // <!-- header jumbotron -->
 section {
     position: relative;
-    background-image: url(../assets/images/bg-parallax.png);
+    background-image: url(../assets/images/bg-parallax.png), url(../assets/images/background-sq.png);
     background-position-y: 50%;
     background-position-x: center;
     background-repeat: no-repeat;
-    height: 800px;
+    background-size: 3000px 900px;
+    height: 700px;
 
     nav {
         height: 55px;
         font-size: 14px;
+        padding-top: 15px;
 
         .logo {
             width: 100px;

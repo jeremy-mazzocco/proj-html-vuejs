@@ -4,6 +4,7 @@ import ServiceCards from "./small_components/ServiceCards.vue";
 import TheCompanyCards from "./small_components/TheCompanyCards.vue";
 import ActionProjectsItems from "./small_components/ActionProjectsItems.vue";
 import ActionProjectsCards from "./small_components/ActionProjectsCards.vue";
+import WhatWeDoingCards from "./small_components/WhatWeDoingCards.vue";
 
 
 export default {
@@ -13,7 +14,7 @@ export default {
         TheCompanyCards,
         ActionProjectsItems,
         ActionProjectsCards,
-
+        WhatWeDoingCards
     },
     data() {
         return {
@@ -120,6 +121,25 @@ export default {
             <div class="row">
                 <ActionProjectsCards v-for="(card, idx) in store.action_and_projects_cards" :key="idx"
                     :detailscardproject="card" :style='{ backgroundImage: "url(" + card.img + ")", }' />
+            </div>
+        </div>
+    </section>
+    <!-- WHAT WE ARE DOING - 4 -->
+    <section class="what-we-are-doing">
+        <div class="container">
+            <h4>
+                what we are doing
+            </h4>
+            <div class="title">
+                <h2>
+                    Results
+                </h2>
+                <h2>
+                    in Numbers
+                </h2>
+            </div>
+            <div class="results">
+                <WhatWeDoingCards v-for="(item, idx) in store.what_we_are_doing_cards" :key="idx" :detailswhat="item" />
             </div>
         </div>
     </section>
@@ -255,18 +275,16 @@ export default {
             }
         }
     }
-}
 
-// ABOUT THE NETWORK - 2
-.right {
-    background-image: url(../assets/images/about-4.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: calc(100% / 2);
-    height: 100%;
+    .right {
+        background-image: url(../assets/images/about-4.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: calc(100% / 2);
+        height: 100%;
+    }
 }
-
 
 // ACTION & PROJECTS - 3 
 .actions-projects {
@@ -301,6 +319,12 @@ export default {
                 li {
                     text-transform: uppercase;
                     color: #606D75;
+                    padding: 7px 8px;
+                }
+
+                li:hover {
+                    background-color: #05838316;
+                    border-radius: 5px;
                 }
             }
         }
@@ -309,6 +333,42 @@ export default {
             @include my-dislay-flex;
             flex-wrap: wrap;
             gap: 20px 10px;
+        }
+    }
+}
+
+// WHAT WE ARE DOING - 4
+.what-we-are-doing {
+    height: 450px;
+    padding: 90px 0px;
+    text-align: center;
+    background-image: url(../assets/images/bg-7.jpg);
+    background-size: cover;
+    background-position: top;
+
+    .container {
+
+        h4 {
+            @include intro-title;
+        }
+
+        .title {
+            h2 {
+                @include title-2;
+            }
+
+            h2:first-child {
+                @include title-2-background;
+            }
+        }
+
+        .results {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px 0px;
+            margin: 20px 0px;
+            padding: 30px 45px;
         }
     }
 }

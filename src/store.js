@@ -101,5 +101,23 @@ export const store = reactive({
             img: './src/assets/images/project-6.jpg',
             description: 'Cofraternisation of the procurement team'
         }
+    ],
+    what_we_are_doing_cards: [
+        {
+            number: '128',
+            text: 'Certifications'
+        },
+        {
+            number: '230',
+            text: 'Employees'
+        },
+        {
+            number: '517',
+            text: 'Customers'
+        },
+        {
+            number: '94',
+            text: 'Countries Seerved'
+        }
     ]
 })

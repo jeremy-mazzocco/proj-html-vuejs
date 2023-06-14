@@ -11,9 +11,11 @@ export default {
 
 <template>
     <div class="card">
-        <div class="transparent">
-            <div class="description">{{ detailscardproject.description }}</div>
-        </div>
+        <a href="#">
+            <div class="transparent">
+                <div class="description">{{ detailscardproject.description }}</div>
+            </div>
+        </a>
     </div>
 </template>
 
