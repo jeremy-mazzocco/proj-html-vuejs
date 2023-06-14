@@ -1,13 +1,15 @@
 <script>
 import { store } from "../store";
 import ServiceCards from "./small_components/ServiceCards.vue";
-import TheCompanyCards from "./small_components/TheCompanyCards.vue"
+import TheCompanyCards from "./small_components/TheCompanyCards.vue";
+import ActionProjectsItems from "./small_components/ActionProjectsItems.vue";
 
 export default {
     name: "PageMain",
     components: {
         ServiceCards,
-        TheCompanyCards
+        TheCompanyCards,
+        ActionProjectsItems
     },
     data() {
         return {
@@ -51,8 +53,14 @@ export default {
         </div>
     </section>
 
-    <!--    ABOUT THE NETWORK - 2 -->
+    <!-- ABOUT THE NETWORK - 2 -->
     <section class="about-network">
+        <div class="top-dots">
+            <img src="../assets/images/new-bullets.png" alt="#">
+        </div>
+        <div class="bottom-dots">
+            <img src="../assets/images/new-bullets.png" alt="#">
+        </div>
         <div class="left">
             <div class="text">
                 <h4>
@@ -67,7 +75,7 @@ export default {
                     </h2>
                 </div>
                 <p>
-                    For 12 yearswe have been providing audit for warranty, financial avice, risk advice, taxes and related
+                    For 12 years we have been providing audit for warranty, financial avice, risk advice, taxes and related
                     servies to select clients.
                 </p>
                 <div class="row">
@@ -82,6 +90,32 @@ export default {
             </div>
         </div>
         <div class="right">
+        </div>
+    </section>
+
+    <!-- ACTION & PROJECTS - 3 -->
+    <section class="actions-projects">
+        <div class="container">
+            <h4>
+                we do more for everyone
+            </h4>
+            <div class="title">
+                <h2>
+                    Actions &
+                </h2>
+                <h2>
+                    Projects
+                </h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <ActionProjectsItems v-for="(item, idx) in store.action_and_projects_menu" :key="idx"
+                        :detailsaction="item" />
+                </ul>
+            </div>
+            <div class="row">
+
+            </div>
         </div>
     </section>
 </template>
@@ -102,16 +136,11 @@ export default {
 
         .title {
             h2 {
-                display: inline-block;
-                font-size: 40px;
-                margin: 10px 0px;
-                color: #21333E;
+                @include titles-1;
             }
 
             h2:nth-child(2) {
-                @include background-titles;
-                margin-left: 4px;
-                padding: 0px 4px;
+                @include titles-1-background;
             }
         }
 
@@ -149,6 +178,24 @@ export default {
 .about-network {
     height: 700px;
     display: flex;
+    position: relative;
+
+    .top-dots,
+    .bottom-dots {
+        position: absolute;
+        width: 8%;
+        opacity: 0.3;
+        z-index: 5;
+        right: 46%;
+    }
+
+    .top-dots {
+        top: -4%;
+    }
+
+    .bottom-dots {
+        bottom: -5%;
+    }
 
     .left {
         background-color: #111117;
@@ -169,21 +216,11 @@ export default {
 
             .title {
                 h2 {
-                    display: inline-block;
-                    font-size: 40px;
-                    color: white;
+                    @include title-2;
                 }
 
                 h2:first-child {
-                    background-color: rgba(27, 142, 142, 0.14);
-                    border-radius: 5px;
-                    margin: 10px 3px;
-                    padding: 0px 10px;
-                    color: white;
-                }
-
-                h2:nth-child(2) {
-                    margin-left: 4px;
+                    @include title-2-background;
                 }
             }
 
@@ -222,6 +259,49 @@ export default {
         background-repeat: no-repeat;
         width: calc(100% / 2);
         height: 100%;
+    }
+}
+
+// ACTION & PROJECTS - 3 
+.actions-projects {
+    height: 900px;
+    padding: 90px 0px;
+    text-align: center;
+
+    .container {
+
+        h4 {
+            @include intro-title;
+        }
+
+        .title {
+            h2 {
+                @include titles-1;
+            }
+
+            h2:nth-child(2) {
+                @include titles-1-background;
+            }
+        }
+
+        .menu {
+            margin: 20px 0px;
+            padding: 0px 100px;
+            font-size: 14px;
+
+            ul {
+                @include my-dislay-flex;
+
+                li {
+                    text-transform: uppercase;
+                    color: #606D75;
+                }
+            }
+        }
+
+        .row {
+            @include my-dislay-flex;
+        }
     }
 }
 </style>

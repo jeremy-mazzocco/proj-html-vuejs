@@ -149,21 +149,15 @@ section {
         transform: translate(-50%, -50%);
         text-align: center;
 
-        h1:first-child {
-            color: #21333E;
-        }
-
         h1 {
-            display: inline-block;
+            @include titles-1;
             font-size: 55px;
             font-weight: 800;
-            margin: 5px;
+            margin-right: 5px;
         }
 
         h1:nth-child(2) {
-            @include background-titles;
-            padding: 0px 10px;
-            border-radius: 3px;
+            @include titles-1-background;
         }
 
         .text {

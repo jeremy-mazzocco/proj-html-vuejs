@@ -66,5 +66,14 @@ export const store = reactive({
             title: 'Expertise',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
         },
-    ]
+    ],
+    action_and_projects_menu: {
+        all: 'all',
+        institutional: 'institutional',
+        social: 'social',
+        events: 'events',
+        innovation: 'innovation',
+        enviroment: 'enviroment',
+        technology: 'technology'
+    }
 })
