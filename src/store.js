@@ -83,7 +83,7 @@ export const store = reactive({
         },
         {
             img: './src/assets/images/project-2.jpg',
-            description: 'President"s speech at the annual meeting'
+            description: "President's speech at the annual meeting"
         },
         {
             img: './src/assets/images/project-3.jpg',

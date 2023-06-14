@@ -338,7 +338,7 @@ export default {
         .menu {
             margin: 20px 0px;
             padding: 0px 100px;
-            font-size: 14px;
+            font-size: 15px;
 
             ul {
                 @include my-dislay-flex;
