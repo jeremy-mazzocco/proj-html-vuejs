@@ -9,9 +9,11 @@ export default {
 
 </script>
 <template>
+
     <li>
         <a href="#">
             {{ detailsaction }}
         </a>
     </li>
+    
 </template>

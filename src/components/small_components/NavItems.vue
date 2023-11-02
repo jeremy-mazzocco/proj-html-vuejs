@@ -9,11 +9,13 @@ export default {
 
 </script>
 <template>
+
     <li>
         <a href="#">
             {{ detailsjumbo }}
         </a>
     </li>
+    
 </template>
 
 <style lang="scss" scoped></style>

@@ -9,6 +9,7 @@ export default {
 
 </script>
 <template>
+
     <div class="card">
         <div class="img">
             <img :src="detailscard.icon" alt="#">
@@ -20,6 +21,7 @@ export default {
             {{ detailscard.description }}
         </p>
     </div>
+
 </template>
 
 <style lang="scss" scoped>
@@ -27,7 +29,6 @@ export default {
 
 .card {
     width: calc((100% / 2) - 10px);
-
     .img {
         display: inline-block;
         vertical-align: middle;

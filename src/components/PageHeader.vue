@@ -17,24 +17,27 @@ export default {
 
 <template>
     <header>
-        <!-- header contact bar -->
         <div class="header-contact-bar">
             <div class="container">
+
                 <div class="open-hours">
                     <i class="fa-solid fa-clock"></i>
                     {{ store.contact.open_hours }}
                 </div>
+
                 <div class="contact">
                     <span class="phone-number">
                         <i class="fa-solid fa-phone"></i>
                         {{ store.contact.phone_number }}
                     </span>
+
                     <span class="email">
                         <i class="fa-solid fa-envelope"></i>
                         <a href="#">
                             {{ store.contact.email }}
                         </a>
                     </span>
+
                     <span class="socials">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -43,16 +46,17 @@ export default {
                 </div>
             </div>
         </div>
-        <!-- header jumbotron -->
+
         <section>
             <nav>
+
                 <div class="logo">
                     <a href="#">
                         <img src="../assets/svgs/svg-7.svg" alt="">
                     </a>
                 </div>
+
                 <div class="list">
-                    <!-- here the nav  -->
                     <ul>
                         <NavItem v-for="(item, idx) in store.jumbotron_nav" :detailsjumbo="item" :key="idx" />
                     </ul>
@@ -61,6 +65,7 @@ export default {
                     </button>
                 </div>
             </nav>
+
             <div class="jumbotron-text">
                 <h1>
                     Ready
@@ -76,6 +81,7 @@ export default {
                     <button id="btn-second">read more</button>
                 </div>
             </div>
+
         </section>
     </header>
 </template>
@@ -91,7 +97,6 @@ ul,
     @include my-dislay-flex;
 }
 
-//  <!-- header contact bar -->
 .header-contact-bar {
     height: 40px;
     background-color: $second-color;
@@ -114,7 +119,6 @@ ul,
     }
 }
 
-// <!-- header jumbotron -->
 section {
     position: relative;
     background-image: url(../assets/images/bg-parallax.png), url(../assets/images/background-sq.png);
@@ -149,7 +153,6 @@ section {
             @include my-button-main-color
         }
     }
-
     .jumbotron-text {
         position: absolute;
         top: 55%;

@@ -10,6 +10,7 @@ export default {
 </script>
 
 <template>
+
     <div class="card">
         <a href="#">
             <div class="transparent">
@@ -17,7 +18,9 @@ export default {
             </div>
         </a>
     </div>
+
 </template>
+
 
 <style lang="scss" scoped>
 .card {

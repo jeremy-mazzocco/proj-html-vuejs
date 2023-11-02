@@ -6,7 +6,6 @@ import ActionProjectsItems from "./small_components/ActionProjectsItems.vue";
 import ActionProjectsCards from "./small_components/ActionProjectsCards.vue";
 import WhatWeDoingCards from "./small_components/WhatWeDoingCards.vue";
 
-
 export default {
     name: "PageMain",
     components: {
@@ -124,6 +123,7 @@ export default {
             </div>
         </div>
     </section>
+
     <!-- WHAT WE ARE DOING - 4 -->
     <section class="what-we-are-doing">
         <div class="container">
@@ -143,6 +143,7 @@ export default {
             </div>
         </div>
     </section>
+
     <!-- LOGOS - 5 -->
     <section class="logos">
         <div class="container">
@@ -166,6 +167,7 @@ export default {
             </div>
         </div>
     </section>
+
     <!-- GET IN TOUCH - 6 -->
     <section class="get-in-touch">
 

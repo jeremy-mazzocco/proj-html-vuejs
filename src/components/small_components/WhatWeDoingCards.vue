@@ -7,6 +7,7 @@ export default {
 }
 </script>
 <template>
+
     <div class="item">
         <div class="number">
             {{ detailswhat.number }}
@@ -15,7 +16,9 @@ export default {
             {{ detailswhat.text }}
         </div>
     </div>
+
 </template>
+
 <style lang="scss">
 @use '../styles/partials/colors.scss' as*;
 

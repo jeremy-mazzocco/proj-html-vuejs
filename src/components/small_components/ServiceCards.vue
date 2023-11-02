@@ -11,6 +11,7 @@ export default {
 
 
 <template>
+
     <div class="card">
         <div class="icons">
             <div class="img">
@@ -25,6 +26,7 @@ export default {
         <h3>{{ detailscard.title }}</h3>
         <p>{{ detailscard.description }}</p>
     </div>
+
 </template>
 
 
@@ -47,7 +49,6 @@ export default {
             width: 40px;
             filter: invert(17%) sepia(17%) saturate(2227%) hue-rotate(132deg) brightness(101%) contrast(94%);
         }
-
         .fa {
             position: absolute;
             right: 0;
@@ -59,7 +60,6 @@ export default {
                 font-size: 20px;
             }
         }
-
         .fa:hover {
             background-color: rgb(129, 217, 217);
 
