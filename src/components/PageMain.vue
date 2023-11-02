@@ -168,10 +168,6 @@ export default {
         </div>
     </section>
 
-    <!-- GET IN TOUCH - 6 -->
-    <section class="get-in-touch">
-
-    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -429,8 +425,4 @@ export default {
     }
 }
 
-// GET IN TOUCH - 6
-.get-in-touch {
-    height: 700px;
-}
 </style>

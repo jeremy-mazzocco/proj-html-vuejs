@@ -32,7 +32,7 @@ export default {
 
     .transparent {
         background-color: rgba(31, 31, 31, 0.5);
-        height: 100%;
+        height: calc(100% - 5px);
         border-radius: 10px;
 
         .description {
